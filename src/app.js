@@ -2,10 +2,10 @@ const express =  require('express');
 const app  = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({extended:true}));
-mongoose.connect("mongodb+srv://Piyush:piyushrajutale@cluster0.gdmyt.mongodb.net/mern?retryWrites=true&w=majority",{useNewUrlParser:true},{useUnifiedTopology:true})
-
+process.env.mongoURI;
 
 const path = require("path");
 const hbs = require("hbs");
